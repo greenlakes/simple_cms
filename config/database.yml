@@ -13,8 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: greenlakes
-  password: 5577rails
+  username: root
+  password: 
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: simple_cms_production
-  username: simple_cms
+  username: greenlakes
   password: <%= ENV['SIMPLE_CMS_DATABASE_PASSWORD'] %>
